@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
     <>
       {/* Navbar */}
@@ -16,6 +16,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
