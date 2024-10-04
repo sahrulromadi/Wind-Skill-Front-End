@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   // usestate untuk menu
-  const [showMenu, setShow] = useState(true);
+  const [showMenu, setShow] = useState(false);
   const menuClick = () => {
     setShow(!showMenu);
   };
@@ -28,10 +28,10 @@ const Navbar = () => {
     });
   }, []);
 
-  let scrollActive = showBg ? "bg-white shadow-md shadow-sky-300 py-6" : "py-4";
+  let scrollActive = showBg ? "bg-white shadow-md shadow-sky-300" : " ";
 
   return (
-    <nav className={`navbar fixed w-full ${scrollActive}`}>
+    <nav className={`navbar fixed w-full py-4 transition-all ${scrollActive}`}>
       <div className="container mx-auto px-6">
         <div className="navbar-box flex items-center justify-between">
           {/* Logo */}
@@ -44,7 +44,7 @@ const Navbar = () => {
           </div>
           {/* Content */}
           <ul
-            className={`flex gap-6 fixed ${menuActive()} top-1/2 -translate-y-1/2 flex-col ps-4 pe-6 py-6 rounded shadow-lg shadow-slate-300 bg-sky-500 font-bold text-white transition-all md:static md:bg-transparent md:w-auto md:h-full md:translate-y-0 md:flex-row md:text-black md:shadow-none md:p-0 md:m-0 lg:gap-14`}
+            className={`flex gap-6 fixed ${menuActive()} top-1/2 -translate-y-1/2 flex-col ps-4 pe-6 py-6 rounded shadow-lg shadow-slate-300 bg-white font-bold text-sky-500 transition-all bg-opacity-95 md:static md:bg-transparent md:w-auto md:h-full md:translate-y-0 md:flex-row md:text-black md:shadow-none md:p-0 md:m-0 lg:gap-14`}
           >
             <li className="font-medium opacity-65 hover:text-black md:hover:text-sky-500 flex items-center gap-2">
               <i className="ri-home-2-line text-2xl block md:hidden"></i>
