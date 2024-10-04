@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [show, setShow] = useState(true);
+  // usestate untuk menu
+  const [showMenu, setShow] = useState(true);
   const menuClick = () => {
-    setShow(!show);
-    console.log(show);
+    setShow(!showMenu);
   };
 
   let menuActive = () => {
-    if (show) {
+    if (showMenu) {
       return "left-0";
     } else {
       return "-left-full";
     }
   };
 
+  // useeffect untuk navbar ketika di scroll
+  const [showBg, setShowBg] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 5) {
+        setShowBg(true);
+      } else {
+        setShowBg(false);
+      }
+    });
+  }, []);
+
+  let scrollActive = showBg ? "bg-white shadow-md shadow-sky-300 py-6" : "py-4";
+
   return (
-    <nav className="navbar fixed w-full py-4">
+    <nav className={`navbar fixed w-full ${scrollActive}`}>
       <div className="container mx-auto px-6">
         <div className="navbar-box flex items-center justify-between">
           {/* Logo */}
