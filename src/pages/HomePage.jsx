@@ -1,6 +1,7 @@
 import React from "react";
 import imgHome from "../../public/assets/img/img-home.png";
 import imgAbout from "../../public/assets/img/logo.png";
+import { projectApi } from "../data/ProjectApi";
 
 const HomePage = () => {
   return (
@@ -73,14 +74,14 @@ const HomePage = () => {
 
         {/* services section */}
         <section>
-          <div className="services-section">
+          <div className="services-section mb-24 md:mb-32">
             <div className="text-services text-center mb-10 md:mb-14 lg:mb-20">
               <h1 className="text-4xl font-medium mb-3 md:text-5xl md:mb-5 lg:mb-8 lg:text-6xl">
                 Services
               </h1>
-              <h3 className="lg:text-2xl">
+              <p className="lg:text-2xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h3>
+              </p>
             </div>
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
               <div className="box-1 p-10 bg-sky-500 text-white rounded-3xl shadow-md">
@@ -120,6 +121,43 @@ const HomePage = () => {
           </div>
         </section>
         {/* services section end */}
+
+        {/* project section */}
+        <section>
+          <div className="project-section">
+            <div className="text-project text-center mb-10 md:mb-14 lg-mb-20">
+              <h1 className="text-4xl font-medium mb-3 md:text-5xl md:mb-5 lg:mb-7 lg:text-6xl">
+                Project
+              </h1>
+              <p className="lg:text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+              {/* map untuk project */}
+              {projectApi.map((data) => {
+                return (
+                  <div
+                    className="box bg-white p-5 rounded-3xl shadow-xl"
+                    key={data.id}
+                  >
+                    <img
+                      src={data.imgUrl}
+                      alt="gambar project 1"
+                      className="w-full h-48 rounded-2xl object-cover"
+                    />
+                    <h1 className="text-xl font-semibold mt-7 mb-2 md:text-2xl lg:text-3xl">
+                      {data.title}
+                    </h1>
+                    <p className="text-lg/7">{data.description}</p>
+                  </div>
+                );
+              })}
+              {/* map untuk project end */}
+            </div>
+          </div>
+        </section>
+        {/* project section end */}
       </div>
     </main>
   );
