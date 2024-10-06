@@ -32,7 +32,7 @@ const HomePage = () => {
                   aspernatur, aperiam temporibus iusto amet laboriosam
                   blanditiis eveniet.
                 </p>
-                <button className="mx-auto block md:mx-0 mt-6 bg-sky-500 text-white py-3 px-10 rounded-full shadow text-sm md:text-lg">
+                <button className="mx-auto block md:mx-0 mt-6 bg-sky-500 border text-white py-3 px-10 rounded-full shadow text-sm md:text-lg hover:bg-white hover:text-sky-500 hover:border-sky-500 duration-300 transition-colors">
                   Tentang Kami
                 </button>
               </div>
@@ -84,7 +84,7 @@ const HomePage = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-              <div className="box-1 p-10 bg-sky-500 text-white rounded-3xl shadow-md">
+              <div className="box-1 p-10 bg-sky-500 border-2 border-sky-500 text-white rounded-3xl shadow-md hover:bg-white hover:text-sky-500 hover:border-sky-500 duration-300 transition-colors">
                 <h1 className="text-2xl mb-5 md:text-3xl lg:text-4xl">1</h1>
                 <h2 className="text-xl font-semibold mb-1 md:mb-3 md:text-2xl lg:text-3xl">
                   lorem
@@ -95,7 +95,7 @@ const HomePage = () => {
                   deserunt dolore cumque magni perferendis!
                 </h3>
               </div>
-              <div className="box-2 p-10 bg-sky-500 text-white rounded-3xl shadow-md">
+              <div className="box-2 p-10 bg-sky-500 border-2 border-sky-500 text-white rounded-3xl shadow-md hover:bg-white hover:text-sky-500 hover:border-sky-500 duration-300 transition-colors">
                 <h1 className="text-2xl mb-5 md:text-3xl lg:text-4xl">2</h1>
                 <h2 className="text-xl font-semibold mb-1 md:mb-3 md:text-2xl lg:text-3xl">
                   lorem
@@ -106,7 +106,7 @@ const HomePage = () => {
                   deserunt dolore cumque magni perferendis!
                 </h3>
               </div>
-              <div className="box-3 p-10 bg-sky-500 text-white rounded-3xl shadow-md">
+              <div className="box-3 p-10 bg-sky-500 border-2 border-sky-500 text-white rounded-3xl shadow-md hover:bg-white hover:text-sky-500 hover:border-sky-500 duration-300 transition-colors">
                 <h1 className="text-2xl mb-5 md:text-3xl lg:text-4xl">3</h1>
                 <h2 className="text-xl font-semibold mb-1 md:mb-3 md:text-2xl lg:text-3xl">
                   lorem
@@ -133,12 +133,12 @@ const HomePage = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+            <div className="grid grid-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-4">
               {/* map untuk project */}
               {projectApi.map((data) => {
                 return (
                   <div
-                    className="box bg-white p-5 rounded-3xl shadow-xl"
+                    className="box bg-white p-5 rounded-3xl shadow-xl transform transition-transform duration-300 hover:scale-105 cursor-pointer"
                     key={data.id}
                   >
                     <img
@@ -149,7 +149,13 @@ const HomePage = () => {
                     <h1 className="text-xl font-semibold mt-7 mb-2 md:text-2xl lg:text-3xl">
                       {data.title}
                     </h1>
-                    <p className="text-lg/7">{data.description}</p>
+                    <p className="text-lg/7 mb-4">{data.description}</p>
+                    <a
+                      href="#"
+                      className="text-sky-500 hover:text-sky-600 duration-300 transition-colors"
+                    >
+                      Read More...
+                    </a>
                   </div>
                 );
               })}

@@ -31,7 +31,7 @@ const Navbar = () => {
   let scrollActive = showBg ? "bg-white shadow-md shadow-sky-300" : " ";
 
   return (
-    <nav className={`navbar fixed w-full py-4 transition-all ${scrollActive}`}>
+    <nav className={`navbar fixed w-full py-4 z-10 transition-all ${scrollActive}`}>
       <div className="container mx-auto px-6">
         <div className="navbar-box flex items-center justify-between">
           {/* Logo */}
@@ -48,24 +48,24 @@ const Navbar = () => {
           >
             <li className="font-medium opacity-65 hover:text-black md:hover:text-sky-500 flex items-center gap-2">
               <i className="ri-home-2-line text-2xl block md:hidden"></i>
-              <a href="http://">Beranda</a>
+              <a href="#">Beranda</a>
             </li>
             <li className="font-medium opacity-65 hover:text-black md:hover:text-sky-500 flex items-center gap-2">
               <i className="ri-information-line text-2xl block md:hidden"></i>
-              <a href="http://">Tentang Kami</a>
+              <a href="#">Tentang Kami</a>
             </li>
             <li className="font-medium opacity-65 hover:text-black md:hover:text-sky-500 flex items-center gap-2">
               <i className="ri-settings-line text-2xl block md:hidden"></i>
-              <a href="http://">Layanan</a>
+              <a href="#">Layanan</a>
             </li>
             <li className="font-medium opacity-65 hover:text-black md:hover:text-sky-500 flex items-center gap-2">
               <i className="ri-image-line text-2xl block md:hidden"></i>
-              <a href="http://">Kontak</a>
+              <a href="#">Kontak</a>
             </li>
           </ul>
           {/* Login */}
           <div className="login bg-sky-500 border border-sky-500 text-white px-5 py-2 rounded-full ml-auto md:ml-0 hover:bg-white hover:text-sky-500 hover:border hover:border-sky-500">
-            <a href="http://">Login</a>
+            <a href="#">Login</a>
           </div>
           <i
             className="ri-menu-3-line text-2xl block ml-6 md:hidden"
