@@ -6,7 +6,7 @@ import { projectApi } from "../data/ProjectApi";
 const HomePage = () => {
   return (
     <main>
-      <div className="container mx-auto px-10 py-36">
+      <div className="container mx-auto px-10 pt-36 pb-32">
         {/* hero section */}
         <section>
           <div className="hero-section mb-24 md:mb-32">
