@@ -15,3 +15,8 @@
   &nbsp;&nbsp;&nbsp;
   <img src="https://github.com/user-attachments/assets/4f19327b-5eb8-4c36-9997-b9be3c97c4f3" alt="iPhone 13 Pro - 2" width="200" />
 </div>
+
+<hr />
+
+<p><strong>Inspired by:</strong> <a href="https://youtu.be/K049QecRGnE?si=rBxvpNdVLcTpAaJN">https://youtu.be/K049QecRGnE?si=rBxvpNdVLcTpAaJN</a></p>
+
